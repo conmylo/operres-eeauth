@@ -1,0 +1,48 @@
+# This is the data file containing the given dataset in the order given
+#----------------------------------------------------------------------
+
+data;
+
+# capacity and cost parameters for each production line
+param:				capacity	cost	:=
+	"BASIC"			1000		2000
+	"SHOWOFF"		800			2000
+	"LUXURIOUS"		900			2600
+	"NEWBASIC"		1600		3400
+	"NEWSHOWOFF"	1800		3700;
+	
+# profit parameter for each car model of each production line
+param profit					:=
+	"BASIC" "BASIC"				2
+	"BASIC" "SHOWOFF"			0
+	"BASIC" "LUXURIOUS"			0
+	"BASIC" "NEWBASIC"			2.5
+	"BASIC" "NEWSHOWOFF"		2.3
+	"SHOWOFF" "BASIC"			0
+	"SHOWOFF" "SHOWOFF"			3
+	"SHOWOFF" "LUXURIOUS"		0
+	"SHOWOFF" "NEWBASIC"		3
+	"SHOWOFF" "NEWSHOWOFF"		3.5
+	"LUXURIOUS" "BASIC"			0
+	"LUXURIOUS" "SHOWOFF"		0
+	"LUXURIOUS" "LUXURIOUS"		5
+	"LUXURIOUS" "NEWBASIC"		0
+	"LUXURIOUS" "NEWSHOWOFF"	4.8;
+	
+# demand parameter for each car model
+param demand 	:=
+	"BASIC"		1400
+	"SHOWOFF"	1100
+	"LUXURIOUS"	800;
+	
+# conversion rates for each model to the each other
+param conversionRates		:=
+	"BASIC" "BASIC"			0
+	"BASIC" "SHOWOFF"		0.3
+	"BASIC" "LUXURIOUS" 	0.05
+	"SHOWOFF" "BASIC" 		0
+	"SHOWOFF" "SHOWOFF" 	0
+	"SHOWOFF" "LUXURIOUS" 	0.1
+	"LUXURIOUS" "BASIC" 	0
+	"LUXURIOUS" "SHOWOFF" 	0
+	"LUXURIOUS" "LUXURIOUS" 0;
